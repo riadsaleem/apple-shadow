@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- الصفحة الرئيسية -->
+    <url>
+        <loc>https://apple-shadow.vercel.app/homepage-1-rtl.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <!-- صفحة عرض الخدمات -->
+    <url>
+        <loc>https://apple-shadow.vercel.app/portfolio-rtl.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <!-- صفحة آراء العملاء -->
+    <url>
+        <loc>https://apple-shadow.vercel.app/about-rtl.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- صفحة المظلات -->
+    <url>
+        <loc>https://apple-shadow.vercel.app/madhalat-rtl.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- صفحة ساندوتش بانل -->
+    <url>
+        <loc>https://apple-shadow.vercel.app/sandwch-bnel-rtl.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- صفحة السواتر -->
+    <url>
+        <loc>https://apple-shadow.vercel.app/swater-rtl.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- صفحة تنسيق الحدائق -->
+    <url>
+        <loc>https://apple-shadow.vercel.app/tansiq-alhadayeq-rtl.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- صفحة البرجولات -->
+    <url>
+        <loc>https://apple-shadow.vercel.app/al-barjulat-rtl.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- صفحة الشبك الزراعي -->
+    <url>
+        <loc>https://apple-shadow.vercel.app/shabak-zirai-rtl.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- صفحة العشب الصناعي -->
+    <url>
+        <loc>https://apple-shadow.vercel.app/artificial-grass-rtl.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- صفحة الحدادة -->
+    <url>
+        <loc>https://apple-shadow.vercel.app/metalwork-rtl.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- صفحة الإنشاءات -->
+    <url>
+        <loc>https://apple-shadow.vercel.app/construction-rtl.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>
