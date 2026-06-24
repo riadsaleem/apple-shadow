@@ -101,11 +101,59 @@ const Bundle = function(win, doc, body) {
 
     /**
      * Injects SVG code from the 'img' src using the SVGInjector plugin
+     * With fallback for file:// protocol (CORS restrictions)
      * @see {@link https://github.com/iconic/SVGInjector}
      */
     const svgInjection = () => {
         const SVGs = getElements('img.svg');
-        SVGInjector(SVGs);
+        // Filter out non-SVG files (like PNG) to prevent SVGInjector errors
+        const svgOnly = Array.from(SVGs).filter(img => {
+            const src = img.getAttribute('src') || '';
+            if (!src.toLowerCase().endsWith('.svg')) {
+                // For PNG/non-SVG with class="svg", just remove the class to prevent issues
+                // and ensure they display as normal images
+                img.style.width = img.style.width || '20px';
+                img.style.height = img.style.height || '20px';
+                img.style.filter = img.style.filter || 'invert(1)';
+                return false;
+            }
+            return true;
+        });
+
+        if (win.location.protocol === 'file:') {
+            // Fallback: manually inline SVGs for file:// protocol
+            svgOnly.forEach(img => {
+                const src = img.getAttribute('src');
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', src, true);
+                xhr.onload = function() {
+                    if (xhr.status === 200 || xhr.status === 0) {
+                        const parser = new DOMParser();
+                        const svgDoc = parser.parseFromString(xhr.responseText, 'image/svg+xml');
+                        const svgEl = svgDoc.querySelector('svg');
+                        if (svgEl) {
+                            // Preserve original classes
+                            const classes = img.getAttribute('class');
+                            if (classes) {
+                                classes.split(' ').forEach(c => {
+                                    if (c && c !== 'svg') svgEl.classList.add(c);
+                                });
+                            }
+                            svgEl.classList.add('svg');
+                            svgEl.removeAttribute('xmlns:a');
+                            if (!svgEl.getAttribute('viewBox') && svgEl.getAttribute('height') && svgEl.getAttribute('width')) {
+                                svgEl.setAttribute('viewBox', '0 0 ' + svgEl.getAttribute('width') + ' ' + svgEl.getAttribute('height'));
+                            }
+                            img.parentNode.replaceChild(svgEl, img);
+                        }
+                    }
+                };
+                xhr.send();
+            });
+        } else {
+            // Normal server: use SVGInjector
+            if (svgOnly.length) SVGInjector(svgOnly);
+        }
     }
 
     /**
