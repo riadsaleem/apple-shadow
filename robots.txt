@@ -1,8 +1,4 @@
 User-agent: *
-
 Allow: /
-
-Disallow: /assets/js/
-Disallow: /vendor/
 
 Sitemap: https://apple-shadow.vercel.app/sitemap.xml
