@@ -200,11 +200,11 @@ const Bundle = function(win, doc, body) {
 
                 addClass(loaderEl, 'loaded');
                 // Animation for loading
-                GS.to(loaderEl, { ease: 'sine.inOut', translateY: '-200vh', duration: 2 });
-                GS.to('#loader_text .char', { ease: 'sine.in', y: -50, duration: 0.5, stagger: 0.1 });
-                GS.to(pathEl, { attr: { d: pathEl.dataset.path }, duration: 1, ease: 'sine.in' });
+                GS.to(loaderEl, { ease: 'sine.inOut', translateY: '-200vh', duration: 0.8 });
+                GS.to('#loader_text .char', { ease: 'sine.in', y: -50, duration: 0.3, stagger: 0.05 });
+                GS.to(pathEl, { attr: { d: pathEl.dataset.path }, duration: 0.5, ease: 'sine.in' });
             } 
-        }, 1000);
+        }, 200);
     }
 
     /**
