@@ -211,7 +211,8 @@ const Bundle = function(win, doc, body) {
      * Implements a custom magic cursor
      */
     const cursor = () => {
-        if (body.dataset.magicCursor === 'true') {
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if (body.dataset.magicCursor === 'true' && !isMobile) {
             const position = { x: 0, y: 0 };
             const page = { x: 0, y: 0 };
             const outerSpeed = 0.15;
