@@ -701,10 +701,8 @@ const Bundle = function(win, doc, body) {
      * @param {object} data - The data associated with the page change
      */
     const pageChange = (data) => {
-        // `dir` attribute change between ltr and rtl page transitions
-        data?.url?.path?.includes('-rtl') ?
-        doc?.documentElement?.setAttribute('dir', 'rtl') :
-        doc?.documentElement?.removeAttribute('dir');
+        // The site is natively RTL, so we ensure the dir attribute is maintained.
+        doc?.documentElement?.setAttribute('dir', 'rtl');
 
         // Initializes necessary functions
         splitting();
