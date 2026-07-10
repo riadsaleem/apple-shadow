@@ -151,11 +151,17 @@
         position: relative;
         z-index: 1;
         line-height: 1.2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* يضبط النص على اليمين في واجهة RTL */
+        text-align: right;
+        padding-right: 5%;
+        width: 100%;
     }
 
     .intro-title .brand-main {
         display: block;
-        font-size: 3.5rem;
+        font-size: 4.8rem;
         font-weight: 800;
         text-shadow: 
             0 0 10px rgba(255, 255, 255, 0.3),
@@ -167,8 +173,8 @@
 
     .intro-title .brand-sub {
         display: block;
-        font-size: 1.8rem;
-        font-weight: 500;
+        font-size: 2.2rem;
+        font-weight: 800; /* نفس خط السطر الأول */
         text-shadow: 
             0 0 8px rgba(255, 255, 255, 0.2),
             0 3px 10px rgba(0, 0, 0, 0.7);
@@ -177,10 +183,10 @@
 
     @media (max-width: 576px) {
         .intro-title .brand-main {
-            font-size: 2.8rem;
+            font-size: 3.8rem; /* تكبير في الموبايل */
         }
         .intro-title .brand-sub {
-            font-size: 1.4rem;
+            font-size: 1.8rem; /* تكبير في الموبايل */
         }
         .intro-head {
             padding: 40px 0;
