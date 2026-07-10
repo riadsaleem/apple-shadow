@@ -91,9 +91,14 @@
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Red+Rose:wght@300..700&display=swap" rel="stylesheet">
-
-    <!-- Preload critical resources for performance -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Red+Rose:wght@300..700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Red+Rose:wght@300..700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Red+Rose:wght@300..700&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Bootstrap select -->
+    <link rel="preload" href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" as="style">
+    <link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet"></noscript>
     <link rel="preload" href="assets/images/ser/1madhalat/m (6).webp" as="image">
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
@@ -268,7 +273,7 @@
                 <!-- Header left -->
                 <div class="header-link">
                     <a href="index.html" class="brand">
-                        <img src="assets/images/logos/logo_new2.webp" alt="شعار الظل _ للمظلات والسواتر">
+                        <img src="assets/images/logos/logo_new2.webp" alt="شعار الظل _ للمظلات والسواتر" width="113" height="80">
                         <div class="hidden">شعار</div>
                     </a>
                     <ul id="lang">
