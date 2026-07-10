@@ -98,9 +98,15 @@
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
-    <!-- Styles -->
-    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+    <style id="loader-css">
+        #loader { position: fixed; top: 0; left: 0; width: 100%; height: 200vh; z-index: 1000; color: var(--loader-color); }
+        #loader_text { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; font-size: calc(1.275rem + 0.3vw); width: 100%; height: 100vh; text-transform: uppercase; letter-spacing: 0.25rem; background-color: var(--loader-bg); }
+        @media (min-width: 1200px) { #loader_text { font-size: 1.5rem; } }
+        #loader_shape { width: 100%; height: 100vh; display: block; fill: var(--loader-bg); transform-origin: 50% 0; position: relative; margin-top: -4px; }
+        #loader .char { display: inline-block; }
+        #loader:not(.loaded) .char { opacity: 0.15; animation: char 750ms infinite alternate calc(20ms + 100ms * var(--char-index)); }
+        @keyframes char { 0% { opacity: 1; } 100% { opacity: 0.15; } }
+    </style>
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -493,6 +499,10 @@
     <!-- Scripts -->
     <script src="assets/js/plugins.js" defer></script>
     <script src="assets/js/scripts.js" defer></script>
+    
+    <!-- Deferred Styles -->
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
     <link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
 </body>
 <div class="modal fade" id="show_servis" >
