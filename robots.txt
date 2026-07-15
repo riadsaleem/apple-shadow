@@ -1,4 +1,4 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 
 # منع الروبوتات من الملفات غير الضرورية
@@ -9,4 +9,4 @@ Disallow: /js/plugins-init/
 Disallow: /vendor/
 
 # ملف خريطة الموقع - مهم لجوجل
-Sitemap: https://apple-shadow.com/sitemap.xml
+Sitemap: https://apple-shadow.vercel.app/sitemap.xml
